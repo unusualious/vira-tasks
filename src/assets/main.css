@@ -1,0 +1,106 @@
+@import './base.css';
+@font-face {
+  font-family: 'Yekan';
+  src: url("./Font/eot/iranyekan.eot");
+  src: url("./Font/eot/iranyekan.eot") format("embedded-opentype"), url("./Font/ttf/iranyekan.ttf") format("truetype"), url("./Font/woff/iranyekan.woff") format("woff"), url("./Font/svg/iranyekan.sng") format("svg");
+  font-display: swap;
+  font-style: normal;
+  font-style: normal;
+  font-weight: bold;
+}
+body {
+  min-height: 100vh;
+  color: #111;
+  background-color: #ecf0f3;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+    font-family: Yekan;
+  line-height: 1.6;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+#app {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-weight: normal;
+}
+.form-control {
+  padding: 0.9rem 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0px 14px 80px rgb(0 0 0 / 4%);
+  border: none;
+}
+.form-control::placeholder{
+  color: #d2d2d2;
+}
+.add-task-input{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.add-task-input input{
+  background-color: #ebeff3;
+  padding-right: 40px;
+}
+.add-task-input::before{
+  content: " ";
+  background-image: url(/src/assets/img/notes.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 30px;
+  top: 15px;
+  right: 10px;
+  position: absolute;
+}
+.add-task-input span{
+  font-size: 19px;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  margin-right: -37px;
+  border-radius: 100%;
+  border: 2px solid;
+  text-align: center;
+  cursor: pointer;
+}
+a,
+.note-buttons {
+  text-decoration:none;
+  cursor: pointer;
+  padding: 7px;
+  color: #bbb;
+  font-size: 12px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  transition: 0.3s;
+  padding: 3px;
+}
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  margin-top: 0;
+}
+.form-check-input:checked{
+  background-color: #111;
+    border-color: #111;
+}
+@media (hover: hover) {
+  a:hover {
+    color: #999;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+}
